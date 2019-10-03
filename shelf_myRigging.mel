@@ -1,0 +1,493 @@
+global proc shelf_myRigging () {
+    global string $gBuffStr;
+    global string $gBuffStr0;
+    global string $gBuffStr1;
+
+
+    shelfButton
+        -enableCommandRepeat 1
+        -flexibleWidthType 3
+        -flexibleWidthValue 32
+        -enable 1
+        -width 35
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import maya.cmds as cmds\n\nfilepath = cmds.file(q=True, sn=True)\nfilepath = filepath.split(\"/\")[-1]\nfilepath = filepath.split(\".\")[0]\nfilepath = filepath.split(\"v\")[1]\nfilepath = int(filepath)+1\n\ncmds.file(rename=\"v{}.ma\".format(str(filepath)))\ncmds.file(save=True, type=\"mayaAscii\")" 
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -align "center" 
+        -label "import maya.cmds as cmds\n\nfilepath = cmds.file(q=True, sn=True)\n..." 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "autoSave" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import maya.cmds as cmds\n\nfilepath = cmds.file(q=True, sn=True)\nfilepath = filepath.split(\"/\")[-1]\nfilepath = filepath.split(\".\")[0]\nfilepath = filepath.split(\"v\")[1]\nfilepath = int(filepath)+1\n\ncmds.file(rename=\"v{}.ma\".format(str(filepath)))\ncmds.file(save=True, type=\"mayaAscii\")" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -flexibleWidthType 3
+        -flexibleWidthValue 32
+        -enable 1
+        -width 35
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import maya.cmds as cmds\n\nlistSel = cmds.ls(sl=True, fl=True)\nparCon = cmds.parentConstraint(listSel[0], listSel[1])\ncm.delete(parCon)" 
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -align "center" 
+        -label "import maya.cmds as cmds\n\nlistSel = cmds.ls(sl=True, fl=True)\npa..." 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "parCon" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import maya.cmds as cmds\n\nlistSel = cmds.ls(sl=True, fl=True)\nparCon = cmds.parentConstraint(listSel[0], listSel[1])\ncm.delete(parCon)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -flexibleWidthType 3
+        -flexibleWidthValue 32
+        -enable 1
+        -width 35
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import maya.cmds as cmds\n\nlistSel = cmds.ls(sl=True, fl=True)\npoiCon = cmds.pointConstraint(listSel[0], listSel[1])\ncm.delete(poiCon)" 
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -align "center" 
+        -label "import maya.cmds as cmds\n\nlistSel = cmds.ls(sl=True, fl=True)\npo..." 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "poiCon" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import maya.cmds as cmds\n\nlistSel = cmds.ls(sl=True, fl=True)\npoiCon = cmds.pointConstraint(listSel[0], listSel[1])\ncm.delete(poiCon)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -flexibleWidthType 3
+        -flexibleWidthValue 32
+        -enable 1
+        -width 35
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import maya.cmds as cmds\n\nlistSel = cmds.ls(sl=True, fl=True)\noriCon = cmds.orientConstraint(listSel[0], listSel[1])\ncm.delete(oriCon)" 
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -align "center" 
+        -label "import maya.cmds as cmds\n\nlistSel = cmds.ls(sl=True, fl=True)\nor..." 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "oriCon" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import maya.cmds as cmds\n\nlistSel = cmds.ls(sl=True, fl=True)\noriCon = cmds.orientConstraint(listSel[0], listSel[1])\ncm.delete(oriCon)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -flexibleWidthType 3
+        -flexibleWidthValue 32
+        -enable 1
+        -width 35
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import maya.cmds as cmds\n\ndef COLOR_SHAPE_CHANGE_DB(void):\n\tcolor = cmds.intField(colorNumb,v=1,q=1)\n\t#---------------------------------------------------------\n\n\tlistSel = cmds.ls(sl=1,fl=1)\n\n\tfor item in listSel:\n\t\tlistShape = cmds.listRelatives(item, type=\"shape\", f=True)\n\t\tfor shapes in listShape:\n\t\t\tcmds.setAttr(\"{}.overrideEnabled\".format(shapes), True)\n\t\t\tcmds.setAttr(\"{}.overrideColor\".format(shapes), color)\n\n#-------------------------------------WINDOW-------------------------------------\nif cmds.window('Color_Shape',exists=1):\n\tcmds.deleteUI('Color_Shape')\n\nColor_Shape = cmds.window('Color_Shape',t='Color Shape')\nmainWindow = cmds.columnLayout(adj=3)\ncmds.separator(h=10,style='none')\ncmds.text('color number')\ncolorNumb = cmds.intField()\ncmds.separator(h=10,style='none')\ncmds.button(l='CHANGE',c=COLOR_SHAPE_CHANGE_DB,h=40)\n\ncmds.showWindow(Color_Shape)" 
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -align "center" 
+        -label "import maya.cmds as cmds\n\ndef COLOR_SHAPE_CHANGE_DB(void):\n\tcolo..." 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "crvColor" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import maya.cmds as cmds\n\ndef COLOR_SHAPE_CHANGE_DB(void):\n\tcolor = cmds.intField(colorNumb,v=1,q=1)\n\t#---------------------------------------------------------\n\n\tlistSel = cmds.ls(sl=1,fl=1)\n\n\tfor item in listSel:\n\t\tlistShape = cmds.listRelatives(item, type=\"shape\", f=True)\n\t\tfor shapes in listShape:\n\t\t\tcmds.setAttr(\"{}.overrideEnabled\".format(shapes), True)\n\t\t\tcmds.setAttr(\"{}.overrideColor\".format(shapes), color)\n\n#-------------------------------------WINDOW-------------------------------------\nif cmds.window('Color_Shape',exists=1):\n\tcmds.deleteUI('Color_Shape')\n\nColor_Shape = cmds.window('Color_Shape',t='Color Shape')\nmainWindow = cmds.columnLayout(adj=3)\ncmds.separator(h=10,style='none')\ncmds.text('color number')\ncolorNumb = cmds.intField()\ncmds.separator(h=10,style='none')\ncmds.button(l='CHANGE',c=COLOR_SHAPE_CHANGE_DB,h=40)\n\ncmds.showWindow(Color_Shape)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -flexibleWidthType 3
+        -flexibleWidthValue 32
+        -enable 1
+        -width 35
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import maya.cmds as cm\n\ndef CONNECTION_TRANSLATE_DB(void):\n\taxis = cm.textField(translateCon,tx=1,q=1)\n\t#---------------------------------------------------------\n\n\tlistAxis = list(axis)\n\tlistSelection = cm.ls( sl=1,fl=1 )\n\tconnectedFrom = listSelection[0]\n\tlistSelection.remove(connectedFrom)\n\n\tfor i in range(len(listSelection)):\n\t\tif \"x\" in listAxis:\n\t\t\tcm.connectAttr( \"{}.tx\".format(connectedFrom),\"{}.tx\".format(listSelection[i]) )\n\t\tif \"y\" in listAxis:\n\t\t\tcm.connectAttr( \"{}.ty\".format(connectedFrom),\"{}.ty\".format(listSelection[i]) )\n\t\tif \"z\" in listAxis:\n\t\t\tcm.connectAttr( \"{}.tz\".format(connectedFrom),\"{}.tz\".format(listSelection[i]) )\n\n\ndef CONNECTION_ROTATE_DB(void):\n\taxis = cm.textField(rotateCon,tx=1,q=1)\n\t#---------------------------------------------------------\n\n\tlistAxis = list(axis)\n\tlistSelection = cm.ls( sl=1,fl=1 )\n\tconnectedFrom = listSelection[0]\n\tlistSelection.remove(connectedFrom)\n\n\tfor i in range(len(listSelection)):\n\t\tif \"x\" in listAxis:\n\t\t\tcm.connectAttr( \"{}.rx\".format(connectedFrom),\"{}.rx\".format(listSelection[i]) )\n\t\tif \"y\" in listAxis:\n\t\t\tcm.connectAttr( \"{}.ry\".format(connectedFrom),\"{}.ry\".format(listSelection[i]) )\n\t\tif \"z\" in listAxis:\n\t\t\tcm.connectAttr( \"{}.rz\".format(connectedFrom),\"{}.rz\".format(listSelection[i]) )\n\n\ndef CONNECTION_SCALE_DB(void):\n\taxis = cm.textField(scaleCon,tx=1,q=1)\n\t#---------------------------------------------------------\n\n\tlistAxis = list(axis)\n\tlistSelection = cm.ls( sl=1,fl=1 )\n\tconnectedFrom = listSelection[0]\n\tlistSelection.remove(connectedFrom)\n\n\tfor i in range(len(listSelection)):\n\t\tif \"x\" in listAxis:\n\t\t\tcm.connectAttr( \"{}.sx\".format(connectedFrom),\"{}.sx\".format(listSelection[i]) )\n\t\tif \"y\" in listAxis:\n\t\t\tcm.connectAttr( \"{}.sy\".format(connectedFrom),\"{}.sy\".format(listSelection[i]) )\n\t\tif \"z\" in listAxis:\n\t\t\tcm.connectAttr( \"{}.sz\".format(connectedFrom),\"{}.sz\".format(listSelection[i]) )\n\n\n\n\n\n#-------------------------------------WINDOW-------------------------------------\nif cm.window('Connection_Window',exists=1):\n\tcm.deleteUI('Connection_Window')\n\nConnection_Window = cm.window('Connection_Window',t='Connection Window')\nmainWindow = cm.columnLayout(adj=3)\ncm.separator(h=10,style='none')\ncm.text('Connection axis')\ntranslateCon = cm.textField(it = \"xyz\")\ncm.separator(h=10,style='none')\ncm.button(l='TRANSLATE',c=CONNECTION_TRANSLATE_DB,h=40)\ncm.separator(h=20,style='none')\ncm.text('Connection axis')\nrotateCon = cm.textField(it = \"xyz\")\ncm.separator(h=10,style='none')\ncm.button(l='ROTATE',c=CONNECTION_ROTATE_DB,h=40)\ncm.separator(h=20,style='none')\ncm.text('Connection axis')\nscaleCon = cm.textField(it = \"xyz\")\ncm.separator(h=10,style='none')\ncm.button(l='SCALE',c=CONNECTION_SCALE_DB,h=40)\n\n\n\ncm.showWindow(Connection_Window)" 
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -align "center" 
+        -label "import maya.cmds as cm\n\ndef CONNECTION_TRANSLATE_DB(void):\n\taxis..." 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "connection" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import maya.cmds as cm\n\ndef CONNECTION_TRANSLATE_DB(void):\n\taxis = cm.textField(translateCon,tx=1,q=1)\n\t#---------------------------------------------------------\n\n\tlistAxis = list(axis)\n\tlistSelection = cm.ls( sl=1,fl=1 )\n\tconnectedFrom = listSelection[0]\n\tlistSelection.remove(connectedFrom)\n\n\tfor i in range(len(listSelection)):\n\t\tif \"x\" in listAxis:\n\t\t\tcm.connectAttr( \"{}.tx\".format(connectedFrom),\"{}.tx\".format(listSelection[i]) )\n\t\tif \"y\" in listAxis:\n\t\t\tcm.connectAttr( \"{}.ty\".format(connectedFrom),\"{}.ty\".format(listSelection[i]) )\n\t\tif \"z\" in listAxis:\n\t\t\tcm.connectAttr( \"{}.tz\".format(connectedFrom),\"{}.tz\".format(listSelection[i]) )\n\n\ndef CONNECTION_ROTATE_DB(void):\n\taxis = cm.textField(rotateCon,tx=1,q=1)\n\t#---------------------------------------------------------\n\n\tlistAxis = list(axis)\n\tlistSelection = cm.ls( sl=1,fl=1 )\n\tconnectedFrom = listSelection[0]\n\tlistSelection.remove(connectedFrom)\n\n\tfor i in range(len(listSelection)):\n\t\tif \"x\" in listAxis:\n\t\t\tcm.connectAttr( \"{}.rx\".format(connectedFrom),\"{}.rx\".format(listSelection[i]) )\n\t\tif \"y\" in listAxis:\n\t\t\tcm.connectAttr( \"{}.ry\".format(connectedFrom),\"{}.ry\".format(listSelection[i]) )\n\t\tif \"z\" in listAxis:\n\t\t\tcm.connectAttr( \"{}.rz\".format(connectedFrom),\"{}.rz\".format(listSelection[i]) )\n\n\ndef CONNECTION_SCALE_DB(void):\n\taxis = cm.textField(scaleCon,tx=1,q=1)\n\t#---------------------------------------------------------\n\n\tlistAxis = list(axis)\n\tlistSelection = cm.ls( sl=1,fl=1 )\n\tconnectedFrom = listSelection[0]\n\tlistSelection.remove(connectedFrom)\n\n\tfor i in range(len(listSelection)):\n\t\tif \"x\" in listAxis:\n\t\t\tcm.connectAttr( \"{}.sx\".format(connectedFrom),\"{}.sx\".format(listSelection[i]) )\n\t\tif \"y\" in listAxis:\n\t\t\tcm.connectAttr( \"{}.sy\".format(connectedFrom),\"{}.sy\".format(listSelection[i]) )\n\t\tif \"z\" in listAxis:\n\t\t\tcm.connectAttr( \"{}.sz\".format(connectedFrom),\"{}.sz\".format(listSelection[i]) )\n\n\n\n\n\n#-------------------------------------WINDOW-------------------------------------\nif cm.window('Connection_Window',exists=1):\n\tcm.deleteUI('Connection_Window')\n\nConnection_Window = cm.window('Connection_Window',t='Connection Window')\nmainWindow = cm.columnLayout(adj=3)\ncm.separator(h=10,style='none')\ncm.text('Connection axis')\ntranslateCon = cm.textField(it = \"xyz\")\ncm.separator(h=10,style='none')\ncm.button(l='TRANSLATE',c=CONNECTION_TRANSLATE_DB,h=40)\ncm.separator(h=20,style='none')\ncm.text('Connection axis')\nrotateCon = cm.textField(it = \"xyz\")\ncm.separator(h=10,style='none')\ncm.button(l='ROTATE',c=CONNECTION_ROTATE_DB,h=40)\ncm.separator(h=20,style='none')\ncm.text('Connection axis')\nscaleCon = cm.textField(it = \"xyz\")\ncm.separator(h=10,style='none')\ncm.button(l='SCALE',c=CONNECTION_SCALE_DB,h=40)\n\n\n\ncm.showWindow(Connection_Window)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -flexibleWidthType 3
+        -flexibleWidthValue 32
+        -enable 1
+        -width 35
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Smooth bind skin options" 
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -align "center" 
+        -label "skinClusterDialog" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "smoothSkin.png" 
+        -image1 "smoothSkin.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "SmoothBindSkinOptions" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -flexibleWidthType 3
+        -flexibleWidthValue 32
+        -enable 1
+        -width 35
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Paint skin weights tool options" 
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -align "center" 
+        -label "skinWeightPaintDialogItem" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "paintSkinWeights.png" 
+        -image1 "paintSkinWeights.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "ArtPaintSkinWeightsToolOptions" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -flexibleWidthType 3
+        -flexibleWidthValue 32
+        -enable 1
+        -width 35
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Add influence options" 
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -align "center" 
+        -label "addInfluenceDialog" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "addWrapInfluence.png" 
+        -image1 "addWrapInfluence.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "AddInfluenceOptions" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -flexibleWidthType 3
+        -flexibleWidthValue 32
+        -enable 1
+        -width 35
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Set driven key options" 
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -align "center" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "setDrivenKeyframe.png" 
+        -image1 "setDrivenKeyframe.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "SetDrivenKeyOptions" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -flexibleWidthType 3
+        -flexibleWidthValue 32
+        -enable 1
+        -width 35
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Customize the joint scale" 
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -align "center" 
+        -label "Joint Size..." 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "JS" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "menuIconDisplay.png" 
+        -image1 "menuIconDisplay.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "JdsWin" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -flexibleWidthType 3
+        -flexibleWidthValue 32
+        -enable 1
+        -width 35
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Toggle the visibility of the origin axis" 
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -align "center" 
+        -label "Origin Axis" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "OA" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "menuIconDisplay.png" 
+        -image1 "menuIconDisplay.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "ToggleOriginAxis" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -flexibleWidthType 3
+        -flexibleWidthValue 32
+        -enable 1
+        -width 35
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Toggle the display of the frame rate" 
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -align "center" 
+        -label "Frame Rate" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "FR" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "menuIconDisplay.png" 
+        -image1 "menuIconDisplay.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "ToggleFrameRate" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -flexibleWidthType 3
+        -flexibleWidthValue 32
+        -enable 1
+        -width 35
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Toggle the display of the component count for visible polygons" 
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -align "center" 
+        -label "Poly Count" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "PC" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "menuIconDisplay.png" 
+        -image1 "menuIconDisplay.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "TogglePolyCount" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+
+} 
