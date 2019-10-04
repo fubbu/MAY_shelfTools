@@ -1,10 +1,16 @@
 import maya.cmds as cmds
 
-filepath = cmds.file(q=True, sn=True)
-filepath = filepath.split("/")[-1]
-filepath = filepath.split(".")[0]
-filepath = filepath.split("v")[-1]
-filepath = int(filepath)+1
+def AUTO_SAVE_PROJECT_DB(*args):
+    filepath = cmds.file(q=True, sn=True)
+    fileName = filepath.split("/")[-1]
+    filepath = filepath.split("/")
+    del filepath[-1]
+    saveFolder = "/".join(filepath)
+    fileName = fileName.split(".")[0]
+    fileName = fileName.split("v")[-1]
+    fileName = int(fileName)+1
 
-cmds.file(rename="v{}.ma".format(str(filepath)))
-cmds.file(save=True, type="mayaAscii")
+    cmds.file(rename="{}/v{}.ma".format(saveFolder, str(fileName)))
+    cmds.file(save=True, type="mayaAscii")
+
+AUTO_SAVE_PROJECT_DB()
