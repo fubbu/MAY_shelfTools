@@ -34,7 +34,7 @@ global proc shelf_myRigging () {
         -style "iconOnly" 
         -marginWidth 1
         -marginHeight 1
-        -command "import maya.cmds as cmds\n\nfilepath = cmds.file(q=True, sn=True)\nfilepath = filepath.split(\"/\")[-1]\nfilepath = filepath.split(\".\")[0]\nfilepath = filepath.split(\"v\")[1]\nfilepath = int(filepath)+1\n\ncmds.file(rename=\"v{}.ma\".format(str(filepath)))\ncmds.file(save=True, type=\"mayaAscii\")" 
+        -command "import maya.cmds as cmds\n\ndef AUTO_SAVE_PROJECT_DB(*args):\n    filepath = cmds.file(q=True, sn=True)\n    fileName = filepath.split(\"/\")[-1]\n    filepath = filepath.split(\"/\")\n    del filepath[-1]\n    saveFolder = \"/\".join(filepath)\n    fileName = fileName.split(\".\")[0]\n    fileName = fileName.split(\"v\")[-1]\n    fileName = int(fileName)+1\n\n    cmds.file(rename=\"{}/v{}.ma\".format(saveFolder, str(fileName)))\n    cmds.file(save=True, type=\"mayaAscii\")\n\nAUTO_SAVE_PROJECT_DB()" 
         -sourceType "python" 
         -commandRepeatable 1
         -flat 1
