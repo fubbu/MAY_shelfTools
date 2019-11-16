@@ -69,7 +69,7 @@ global proc shelf_myRigging () {
         -style "iconOnly" 
         -marginWidth 1
         -marginHeight 1
-        -command "import maya.cmds as cmds\n\nlistSel = cmds.ls(sl=True, fl=True)\nparCon = cmds.parentConstraint(listSel[0], listSel[1])\ncm.delete(parCon)" 
+        -command "import maya.cmds as cmds\n\nlistSel = cmds.ls(sl=True, fl=True)\nparCon = cmds.parentConstraint(listSel[0], listSel[1])\ncmds.delete(parCon)" 
         -sourceType "python" 
         -commandRepeatable 1
         -flat 1
@@ -104,7 +104,7 @@ global proc shelf_myRigging () {
         -style "iconOnly" 
         -marginWidth 1
         -marginHeight 1
-        -command "import maya.cmds as cmds\n\nlistSel = cmds.ls(sl=True, fl=True)\npoiCon = cmds.pointConstraint(listSel[0], listSel[1])\ncm.delete(poiCon)" 
+        -command "import maya.cmds as cmds\n\nlistSel = cmds.ls(sl=True, fl=True)\npoiCon = cmds.pointConstraint(listSel[0], listSel[1])\ncmds.delete(poiCon)" 
         -sourceType "python" 
         -commandRepeatable 1
         -flat 1
@@ -139,7 +139,7 @@ global proc shelf_myRigging () {
         -style "iconOnly" 
         -marginWidth 1
         -marginHeight 1
-        -command "import maya.cmds as cmds\n\nlistSel = cmds.ls(sl=True, fl=True)\noriCon = cmds.orientConstraint(listSel[0], listSel[1])\ncm.delete(oriCon)" 
+        -command "import maya.cmds as cmds\n\nlistSel = cmds.ls(sl=True, fl=True)\noriCon = cmds.orientConstraint(listSel[0], listSel[1])\ncmds.delete(oriCon)" 
         -sourceType "python" 
         -commandRepeatable 1
         -flat 1
@@ -345,6 +345,111 @@ global proc shelf_myRigging () {
         -marginWidth 1
         -marginHeight 1
         -command "SetDrivenKeyOptions" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -flexibleWidthType 3
+        -flexibleWidthValue 32
+        -enable 1
+        -width 35
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import maya.cmds as cmds\n\nallNodes = cmds.ls(sl=True, fl=True)\nfor node in allNodes:\n    cmds.lockNode(node, l=False)" 
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -align "center" 
+        -label "import maya.cmds as cmds\n\nallNodes = cmds.ls(sl=True, fl=True)\nf..." 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "unlockNode" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import maya.cmds as cmds\n\nallNodes = cmds.ls(sl=True, fl=True)\nfor node in allNodes:\n    cmds.lockNode(node, l=False)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -flexibleWidthType 3
+        -flexibleWidthValue 32
+        -enable 1
+        -width 35
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Delete construction history on the selected object(s)" 
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -align "center" 
+        -label "History" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Hist" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "menuIconEdit.png" 
+        -image1 "menuIconEdit.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "DeleteHistory" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -flexibleWidthType 3
+        -flexibleWidthValue 32
+        -enable 1
+        -width 35
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Freeze transformation options" 
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -align "center" 
+        -label "identityApplyItemOption" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Fto" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "menuIconModify.png" 
+        -image1 "menuIconModify.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "FreezeTransformationsOptions" 
         -sourceType "mel" 
         -commandRepeatable 1
         -flat 1
